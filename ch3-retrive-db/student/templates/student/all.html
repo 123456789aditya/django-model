@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="stylesheet"href="index.css"/> {% endcomment %}
+    <title>Document</title>
+</head>
+<body>
+    <h1> This is data base retrive</h1>
+    {% if stu %}
+    <h1>Student Data</h1>
+    {% else %}
+    <h1>No Data</h1>
+    {% endif %}
+
+    
+    <ul>
+        {% for st in stu %}
+        <li>{{st.name}}-{{st.email}}-{{st.roll}}</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
