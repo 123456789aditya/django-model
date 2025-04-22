@@ -16,10 +16,20 @@
    <br/>
    {{sa.contact.label_tag}} {{sa.contact}} {% endcomment %}
 
-   <form action="">
+   {% comment %} <form action="">
     <label for="">name</label> {{sa.name}}
     <label for="">email</label> {{sa.email}}
-   </form>
+   </form> {% endcomment %}
+
+
+
+   <form action="">
+    <label for="{{form.name.id_for_label}}">name</label> <input type="text" name="name" required id="{{form.name.id_for_label}}">
+    <label for="{{form.email.id_for_label}}">email</label> {{sa.email}} <input type="text" name="email" required_id="{{form.email.id_for_label}}">
+   </form> 
+
+
+
 
 </body>
 </html>

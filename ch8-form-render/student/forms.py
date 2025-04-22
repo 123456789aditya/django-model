@@ -6,4 +6,7 @@ class Registration(forms.Form):
     city=forms.CharField(max_length=75)
     contact=forms.IntegerField()
     
-    
+
+class Login(forms.Form):
+    username=forms.CharField(max_length=70)
+    password=forms.CharField(max_length=100)
