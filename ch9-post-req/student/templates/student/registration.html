@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Document-1</h1>
+    <br/>
+   {% comment %} {{sa.name.label_tag}} {{sa.name}}
+   <br/>
+   {{sa.email.label_tag}} {{sa.email}}
+   <br/>
+   {{sa.city.label_tag}} {{sa.city}}
+   <br/>
+   {{sa.contact.label_tag}} {{sa.contact}} {% endcomment %}
+
+   {% comment %} <form action="">
+    <label for="">name</label> {{sa.name}}
+    <label for="">email</label> {{sa.email}}
+   </form> {% endcomment %}
+
+
+{% comment %} 
+   <form action="">
+    <label for="{{form.name.id_for_label}}">name</label> <input type="text" name="name" required id="{{form.name.id_for_label}}">
+    <label for="{{form.email.id_for_label}}">email</label> {{sa.email}} <input type="text" name="email" required_id="{{form.email.id_for_label}}">
+   </form>  {% endcomment %}
+
+   <form action="" method="post">
+    {{regr.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="submit">
+
+   </form>
+
+
+
+
+</body>
+</html>
